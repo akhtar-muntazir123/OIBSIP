@@ -1,19 +1,37 @@
-let celciusInput = document.querySelector('#celcius')
-let fahrenheitInput = document.querySelector('#fahrenhite')
-let kelvinInput=document.querySelector('#kelvin')
-
-function roundNumber(number){
-    return Math.round(number*100)/100
-}
-
-
-celciusInput.addEventListener('input',function(){
-    let cTemp =parseFloat(celciusInput.value)
-    console.log(cTemp)
-    let fTemp=(cTemp*(9/5))+32
-    let kTemp=cTemp+273.15
-    fahrenheitInput.value= roundNumber(fTemp)
-    
-    // kelvinInput.value= roundNumber(kTemp)
-}
-)
+let celsius = document.getElementById('celsius');
+    let fahrenheit = document.getElementById('fahrenheit');
+    let kelvin = document.getElementById('kelvin');
+    celsius.oninput = function () {
+        console.log(celsius)
+        let f = (parseFloat(celsius.value) * 9) / 5 + 32;
+        fahrenheit.value = parseFloat(f.toFixed(2));
+      
+        let k = (parseFloat(celsius.value) + 273.15);
+        kelvin.value = parseFloat(k.toFixed(2));
+    }
+    fahrenheit.oninput = function () {
+        let c = ((parseFloat(
+            fahrenheit.value) - 32) * 5) / 9;
+        celsius.value = parseFloat(c.toFixed(2));
+      
+        let k = (parseFloat(
+            fahrenheit.value) - 32) * 5 / 9 + 273.15;
+        kelvin.value = parseFloat(k.toFixed(2));
+    }
+    kelvin.oninput = function () {
+        let f = (parseFloat(
+            kelvin.value) - 273.15) * 9 / 5 + 32;
+        fahrenheit.value = parseFloat(f.toFixed(2));
+      
+        let c = (parseFloat(kelvin.value) - 273.15);
+        celsius.value = parseFloat(c.toFixed(2));
+    }
+    let button=document.querySelector('#clear')
+    if(button){
+        button.addEventListener("click",function(){
+            celsius.value=null;
+            fahrenheit.value=null;
+            kelvin.value=null;
+        }
+        )
+    }
