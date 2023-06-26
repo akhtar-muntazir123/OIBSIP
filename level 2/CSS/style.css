@@ -1,9 +1,21 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');:root {
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto+Condensed&display=swap");
+:root {
   --main-bg-color: #7bb4e3;
 }
-header{
-  font-family: 'Quicksand', sans-serif;
+.design {
+  font-family: "Dancing Script", cursive;
+  position: absolute;
+  top: 23%;
+  left: 20%;
+  z-index: 2;
+  font-size: 70px;
+  color: #f8b735f3;
+  padding: 2px;
+}
+
+header {
+  font-family: "Quicksand", sans-serif;
 }
 .navbar-nav {
   margin-left: 600px;
@@ -21,22 +33,23 @@ header{
   font-weight: 500px;
   color: var(--main-bg-color);
 }
-.home{
+.home {
   height: 100vh;
   display: flex;
   align-items: center;
-padding: 0% 10%;
+  padding: 0% 10%;
+  background: rgba(243, 243, 243, 0.911);
 }
-.home-content{
-  font-family: 'Quicksand', sans-serif;
+.home-content {
+  font-family: "Quicksand", sans-serif;
   /* background: yellow; */
   max-width: 600px;
 }
-.home-content h3{
+.home-content h3 {
   color: var(--main-bg-color);
   font-weight: 700;
 }
-.btn-box a{
+.btn-box a {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -52,41 +65,39 @@ padding: 0% 10%;
   border-radius: 8px;
   letter-spacing: 1px;
 }
-.btn-box a:hover{
-  background:#81b7e3e8;
+.btn-box a:hover {
+  background: #81b7e3e8;
   font-size: 16px;
 }
-.mypic img{
+.mypic img {
   height: 300px;
   width: 300px;
-  position: relative;
+  position: absolute;
   border-radius: 50%;
-
 }
-.mypic{
+.mypic {
   height: 300px;
   width: 300px;
-  background: red;
+  /* background: red; */
   position: relative;
   top: 0px;
   left: 20%;
 }
-footer{
+footer {
   height: 15vh;
-  background:whitesmoke;
+  background: whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
-footer a i{
+footer a i {
   margin: 5px;
-height: 40px;
-width: 40px;
-text-align: center;
-font-size: 30px;
-color: var(--main-bg-color);
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-size: 30px;
+  color: var(--main-bg-color);
 }
 

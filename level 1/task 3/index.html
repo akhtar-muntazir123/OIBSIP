@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEmperature converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- converter box -->
+    <h1>Temperature Converter</h1>
+    <div class="container">
+      <img src="assets/thermometer.png" alt="">
+ 
+      <!-- input values to convert -->
+      
+      <label >Degree:</label>
+      <input type="number" id="temp"  />
+
+      <!-- dropdown input box -->
+      <div class="dropdown-container">
+        <label> From</label>
+        <select class="dropdown inputs" id="input-dropdown">
+          <option value="Celcius" selected>Celcius</option>
+          <option value="Fahrenheit">Fahrenheit</option>
+          <option value="Kelvin">Kelvin</option>
+        </select>
+        <label> To</label>
+        <select class="dropdown outputs" id="output-dropdown">
+          <option value="Celcius" selected>Celcius</option>
+          <option value="Fahrenheit">Fahrenheit</option>
+          <option value="Kelvin">Kelvin</option>
+        </select>
+      </div>
+
+      <!-- display result -->
+      <label>Result :</label>
+			<input type="text" id="result">
+	
+    </div>
+    <button class="btn" id="Submit" onclick="convert()">Convert</button>
+    <script src="script.js"></script>
+  </body>
+</html>
