@@ -57,6 +57,50 @@ header {
   /* background: yellow; */
   max-width: 600px;
 }
+
+.container{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  /* background:black; */
+  color: var(--main-bg-color);
+  font-size: 25px;
+  width: 260px;
+}
+.container .text{
+  position: relative;
+  font-weight: 500;
+  overflow: hidden;
+}
+.text.first-text{
+  color: black;
+}
+.text.second-text{
+  margin-left: 6px;
+  font-weight: 600;
+}
+.text.second-text::before{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+background:  rgba(243, 243, 243, 0.911);
+border-left: 3px solid  var(--main-bg-color);
+animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+  40%,60%{
+      left: 100%;
+  }
+  100%{
+      left: 0%;
+  }
+}
 .home-content h3 {
   color: var(--main-bg-color);
   font-weight: 700;
