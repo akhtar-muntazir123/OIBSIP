@@ -131,11 +131,12 @@ animation: animate 4s steps(12) infinite;
   transform: scale(0.9);
   transition-duration: 0.4s;
 }
-.mypic img {
+.mypic .back {
   height: 300px;
   width: 300px;
   position: absolute;
-  border-radius: 50%;
+
+
 }
 .mypic {
   height: 300px;
@@ -144,6 +145,15 @@ animation: animate 4s steps(12) infinite;
   position: relative;
   top: 0px;
   left: 20%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.boy{
+  height: 300px;
+  position: absolute;
+  top: 10px;
+   right:50px;
+
 }
 .container-projects {
   padding: 50px 0px;
@@ -216,7 +226,8 @@ justify-content: center;
   height: 380px;
   display:flex;
   position: relative;
-  color: white;
+  color: pink;
+  opacity: 95%;
   z-index: 2;
 }
 .cards-content h3{
@@ -224,33 +235,91 @@ justify-content: center;
   transform: translate(-50%,-50%);
   left: 50%;
   top: 25%;
-  font-size: 60px;
+  font-size: 50px;
 }
-.cards-content span a {
-position: absolute;
-color:var(--main-bg-color);
-font-size: 65px;
-top: 65%;
-transform: translate(-50%,-50%);
-left: 50%;
+.cards-content span  {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  color:var(--main-bg-color);
+  font-size: 65px;
+  top: 65%;
+  transform: translate(-50%,-50%);
+  left: 50%;
 }
+.cards-content span  a{
+  color: var(--main-bg-color);
+  margin: 3px auto;
+}
+
+/*  
 .about{
  
   text-align:center;
   line-height:4em;
   letter-spacing:.1em;
   opacity: 0.8;
-  color: white;
-  background: #212121;
+  color: white; */
+  /* background: #212121; */
+  /* background-image: url('../ASSETS/back.png');
   height: 500px;
 
-}
+} */
 .info ul{
   list-style: none;
 }
 .info ul li a{
   text-decoration: none;
 }
+.skills{
+  font-family: "Quicksand", sans-serif;
+ height: 80vh;
+  background-image: url('../ASSETS/back.png');
+}
+.skills h2{
+  padding: 35px 0px;
+ text-align: center;
+ color: white;
+}
+.skills-content{
+  align-items: center;
+  /*  */
+  max-width:900px;
+  /*  */
+  margin: 40px auto;
+  display: flex;
+  flex-direction: row;
+}
+.skills-about{
+  width: 550px;
+  margin-right: 30px;
+}
+.skills-about h2 {
+  color: pink;
+}
+.skills-about h2 a{
+
+color: white;
+text-decoration: none;
+background: linear-gradient(
+  rgba(247, 18, 209, 0.959),
+  rgb(103, 187, 193)
+);
+padding: 0px 5px 2px 5px;
+border-radius: 10px;
+font-size:25px;
+
+}
+.skills-main{
+  margin-left: 60px;
+}
+
+
+
+
+
+
 .question-container{
 
   height: 100vh;

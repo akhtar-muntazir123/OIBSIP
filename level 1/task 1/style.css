@@ -4,83 +4,241 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
-.logo{
-    background-color: black;
-    height: 50px;
-    width: 50px;
+body{
+    background:black;
 }
-section{
-     position: relative;
-     width: 100%;
-     height: 100vh;
-     padding: 100px;
-     background: beige;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
 
+.logo{
+    /* background-color: black; */
+    height: 55px;
+  
 }
-nav{
+
+header{
+    z-index: 999;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
-
+    padding: 15px 200px;
+    transition: 0.5s ease;
 }
-nav .logo{
+header .nav{
+    position: relative;
+}
+header .nav .nav-items a{
+    position: relative;
+    color: rgba(255, 65, 65, 0.952);
+    font-size: 1em;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 30px;
+    padding-bottom:3px;
+}
+header .nav .nav-items a::before{
+    content: "";
     position: absolute;
-    top: 10%;
-    min-width: 100px;
-    min-height: 61px;
+    background: rgba(255, 65, 65, 0.952);
+
+    width:0%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s ease;
 }
-nav ul{
+header .nav .nav-items a:hover:before{
+width:100%
+}
+.home{
+    position: relative;
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0px;
+    /* background: rgb(15, 173, 204); */
+}
+.home img{
+    border-radius: 15px;
+    z-index: 000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 85%;
+    object-fit: cover;
+}
+.img-slider{
+    position: absolute;
+    width: 80%;
+    clip-path: circle(0% at 0 50%);
+}
+.img-slider.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+.slider-nav{
+    z-index: 888;
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+
 }
-nav ul li{
-    list-style: none;
-  
+.slider-nav .nav-btn{
+    width: 12px;
+    height: 12px;
+    background:white ;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow:  0 02 2px white;
+    transition: 0.3s ease;
 }
-nav ul li a{
-  display: inline-block;
-  color: #333;
-  font-weight: 400;
-  margin-right: 40px;
+.slider-nav .nav-btn:not(:last-child){
+    margin-right: 20px;
+}
+.slider-nav .nav-btn:hover{
+    transform: scale(1.2);
+}
+.slider-nav .nav-btn.active{
+    background: red;
+   
+}
+.home .content{
+    z-index:888;
+    color:red;
+    width:70%;
+    display:none;
+}
+.home .content.active{
+    display: block;
+}
+.home .content h1{
+    margin-bottom: 200px;
+font-size: 4em;
+font-weight: 900;
+text-transform: uppercase;
+letter-spacing: 5px;
+line-height: 75px;
+/* margin-bottom: 40px; */
+}
+.home .content h1 span{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.home .content p{
+margin-bottom: 65px;
+}
+.home .content a{
+    background:rgba(255, 65, 65, 0.952);
+    padding: 15px 35px;
+    color:white  ;
+    /* border: 3px solid  rgba(255, 65, 65, 0.952); */
+    font-size: 1.1em;
+    font-weight: 600;
     text-decoration: none;
+    border-radius: 4px;
 }
-.barbecue{
-    height: 350px;
-}
-.barbecue:hover{
-    transform: scale(1.3,1.3);
-    transition-duration: 0.4s;
-  
+.home .media-icons{
+    z-index: 888;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
 }
 
-.content{
-    position: relative;
+@media (max-width: 1040px){
+    header{
+        padding: 12px 20px;
+    }
+    section {
+        padding:100px 20px ;
+    }
+    header .nav{
+      display: none;
+    }
+    header .nav .nav-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+        font-weight: 700;
+        text-decoration: none;
+        margin-left: 30px;
+        transition: 0.5s ease;
+        
+    }
+    header .nav .nav-items{
+        background:white;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 5px;
+    }
+    header .nav .nav-items a::before{
+    background: #222;
+    height: 5px;
+    }
+    header .nav.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: aqua;
+    }
+    .menu-btn{
+        background: url('https://e7.pngegg.com/pngimages/390/663/png-clipart-round-red-logo-red-menu-icon-icons-logos-emojis-menu-icons-thumbnail.png') no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.5s ease;
+    }
+    .menu-btn.active{
+        z-index: 999;
+        background: url('https://static.vecteezy.com/system/resources/previews/017/350/109/original/red-cross-button-in-round-shape-png.png') no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.5s ease;
+    }
+}
+.container{
+    margin: 20px auto;
+    height: 500px;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.content .textbox{
+.container .card{
+    height:383px;
     position: relative;
-    max-width: 600px;
 }
-.content .textbox h2{
-    
-    color: #333;
-    font-size: 3.5em;
-    line-height: 1.4em;
-    font-weight: 500;
+.card-img-top{
+    height: 380px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-.content .textbox h2 span{
-    color: orangered;
-    font-weight: 900;
+.card-body{
+    z-index: 888;
+
 }
